@@ -1,0 +1,581 @@
+.carcity {
+    background-image: url(../assets/backgrounds/carcity.jpg);
+    width: 100vw;
+
+    background-size: 1920px;
+    background-repeat: no-repeat;
+    background-position: 50% -271px;
+    overflow: hidden;
+    height: 982px;
+}
+.main {
+    overflow-x: hidden;
+    width: 100vw;
+}
+body {
+    overflow-x: hidden;
+}
+h1 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 149px;
+    line-height: 37%;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'UA', sans-serif;
+}
+.banner__header-down {
+    font-size: 68px;
+}
+.banner__header-center {
+    font-size: 139px;
+    margin-top: 14px;
+}
+.banner__container {
+    position: absolute;
+    top: 165px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    transform: translateX(-100%);
+}
+.banner {
+    background-image: url(../assets/images/bg.png);
+    width: 1220px;
+    height: 210px;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: end;
+    padding: 24px 71px;
+    position: relative;
+}
+.play__button {
+    font-weight: 700;
+    font-size: 35px;
+    font-family: 'Vinron', sans-serif;
+    line-height: 150%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    background: #000000;
+    transform: skewX(-16deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 83px;
+    margin-top: 46px;
+    border: 2px solid #fff;
+    box-shadow: inset 0 0 13px 0 #931d38, inset 0 2px 4px 0 rgba(193, 20, 59, 0.5), inset 0 -2px 4px 0 rgba(203, 25, 25, 0.5), inset 2px 0 13px 0 rgba(202, 30, 70, 0.5), inset -2px 0 13px 0 rgba(201, 38, 75, 0.5);
+}
+.play__button p {
+    transform: skewX(8deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    text-shadow: 1px 1px 5px #C9264B, -1px -1px 5px #C9264B, 2px 2px 5px #C9264B, -2px -2px 5px #C9264B;
+}
+.car {
+    display: none;
+}
+img.phone {
+    position: absolute;
+    right: 50%;
+    top: 100px;
+    transform: translateX(155%);
+}
+.line {
+    height: 322px;
+    margin-top: -54px;
+    width: 140vw;
+    transform: translateX(-10%);
+    background: #010C1D;
+    filter: blur(25px);
+    display: flex;
+    justify-content: center;
+    margin-bottom: -55px;
+    z-index: 30;
+    position: relative;
+}
+.scroll {
+    width: 45px;
+    top: 960px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 200;
+    cursor: pointer;
+}
+.news {
+    background-image: url(../assets/backgrounds/18.jpg);
+    width: 100vw;
+    height: 855px;
+    background-position: 50% 0%;
+    margin-top: -10px;
+    position: relative;
+    overflow: hidden;
+    min-height: 223px !important;
+}
+.news__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:15vw;
+    padding-top:5vh;
+}
+.news__left-cont,
+.news__right-cont {
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}.news__right-cont {
+    align-items: start;
+}
+.news__left-cont img:nth-child(2) {
+    width: 440px;
+    margin-top:30px
+}
+.news__left-cont img:nth-child(1) {
+    margin-top: -30px;
+}
+.blur {
+    position: absolute;
+    width: 86%;
+    height: 79%;
+    backdrop-filter: blur(2px);
+    left: 0;
+    z-index: -1;
+}
+.news__right-cont-header {
+    font-style: italic;
+font-weight: 700;
+font-size: 60px;
+line-height: 109%;
+text-transform: uppercase;
+color: #fff;
+font-family: 'EU', sans-serif;
+}
+.news__right-cont p {
+    font-weight: 400;
+font-size: 22px;
+line-height: 114%;
+text-align: center;
+color: #fff;
+margin: 20px 0 40px;
+
+
+font-family: 'Involve', sans-serif;
+}
+.flagmob {
+    display: none;
+}
+.news__right-cont a span {
+        transform: skewX(10deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 15px;
+        text-shadow: none;
+        font-weight: 700;
+font-size: 22px;
+line-height: 127%;
+text-transform: uppercase;
+text-align: center;
+color: #fff;
+font-family: 'Vinron', sans-serif;
+}
+.news__right-cont a {
+    box-shadow: none;
+    background: #7000FF;
+    border:none;
+    border-radius: 5px;
+    padding: 8px 50px;
+    transform: skewX(-10deg);
+}
+.news__left-cont img:not(:last-child) {
+
+    z-index: 10;
+}
+.flag {
+    position: absolute;
+    z-index: 0;
+    left: -2px;
+    top: -225px;
+}
+img.flag {
+    z-index: 0 !important;
+}
+@media (max-width:1441px) {
+    .carcity {
+        height: 850px;
+        background-position: 50% -86px;
+        background-size: 1550px;
+    }
+    
+.scroll {
+    width: 45px;
+    top: 848px;
+}
+}
+@media (max-width:1439px) {
+    h1 {
+        font-weight: 400;
+        font-size: 121px;
+        line-height: 49%;
+    }
+    .banner__header-down {
+        font-size: 55px;
+    }
+    .banner__header-center {
+        margin-top: 0;
+        font-size: 113px;
+    }
+    .banner__container {
+        position: absolute;
+        top: 147px;
+        left: 558px;
+
+        transform: translateX(-100%);
+    }
+    img.phone {
+        position: absolute;
+        right: 49%;
+        bottom: 10%;
+        transform: translateX(40vw);
+        width: clamp(281px, 25vw, 350px);
+    }
+    .play__button {
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 150%;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        margin-right: 83px;
+        margin-top: 22px;
+    
+    }
+    .carcity {
+        background-size: 100%;
+        background-position: 21% 20%;
+        overflow: hidden;
+        height: 670px;
+    }
+    .scroll {
+        top:650px
+    }
+    .news__right-cont-header {
+        font-size: 50px;
+    }
+    .news__right-cont p {
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .news__right-cont button span {
+
+        font-size: 20px;
+    }
+    .news__content {
+
+        gap: 3vw;
+    }
+    .news__left-cont img:first-child {
+        width: 420px;
+    }
+    .news__left-cont img:nth-child(2) {
+        width: 300px;
+    }
+    .news__right-cont {
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .line {
+        height: 249px;
+    }    
+    
+}
+@media (min-width:1026px) and (max-width:1020) {
+    .flag {
+        top: -235px;
+    }
+    .news {
+
+        height: 821px;
+    }
+    .news__content {
+        gap: 3vw;
+        margin-left: -90px;
+    }
+}
+@media (max-width:1023px) {
+    .flag {
+        top: -235px;
+        width: 967px;
+        left: -245px;
+    }
+    .blur {
+        display: block;
+  
+        top: 4px;
+        height: 128px;
+        left: 32px;
+        width: 303px;
+    
+    }
+    .flagmob {
+        display: block;
+        position: absolute;
+        width: 100vw;
+        top: 8vw;
+        z-index: 0;
+    }
+    
+}
+@media (max-width:1440px) and (min-width:1024px) {
+    .news__right-cont-header {
+        font-size: 50px;
+        width: 400px;
+    }
+}
+@media (max-width:1023px) {
+    .phone {
+        display: none;
+    }
+    .news {
+        background-image: url(../assets/backgrounds/18.jpg);
+        width: 100vw;
+        height: 935px;
+    }
+    .banner {
+        background-image: url(../assets/images/Play_title.png);
+        width: 650px;
+        height: 64vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .banner__container {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(-50%);
+        height: 763px;
+        justify-content: space-between;
+    }
+    .carcity {
+        background-image: url(../assets/images/game_bg.jpg);
+        background-position: 63.5% 50%;
+        overflow: hidden;
+        background-size: cover;
+        height: 910px;
+    }
+    button.play__button {
+        margin-right: 0;
+        margin-top: 233px;
+    }
+    button {
+        margin: 0;
+    }
+    .line {
+        height: 120px;
+    }
+    button p {
+
+        padding: 8px 20px;
+    }
+    .car {
+        display: block;
+        position: absolute;
+        top: 350px;
+        width: 90vw;
+        max-width: 499px;
+    }
+    .container {
+        width: 520px;
+    }
+    .play__button {
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 150%;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        margin-right: 0;
+        margin-top: 22px;
+    }
+    .news__content {
+        flex-direction: column-reverse;
+        display: flex;
+    }
+    .news__right-cont {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .news__right-cont-header {
+        font-size: 50px;
+        text-align: center;
+    }
+    .news__left-cont, .news__right-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .flag {
+        transform: rotate(-45deg);
+        top: 236px;
+        left: 70px;
+        width: 1100px;
+    }
+    .news__left-cont img:nth-child(2) {
+        width: 300px;
+        margin-top: 7vw;
+    }
+    .news {
+
+        background-position: 42% 0%;
+    }
+    .news__right-cont a {
+        position: absolute;
+        bottom: 52px;
+    }
+    h1 {
+        font-weight: 400;
+        font-size: 167px;
+    }
+    .banner__header-center {
+        font-size: 154px;
+        margin-left: 18px;
+    }
+    .banner__header-down {
+        font-size: 78px;
+        margin-top: -24px;
+        margin-left: 30px;
+    }
+    .scroll {
+
+        top: 936px;
+    }
+}
+
+@media (max-width:768px) {
+
+    .news__right-cont-header {
+        font-size: 30px;
+    }
+    .news__left-cont img:first-child {
+        width: clamp(320px, 60vw, 400px);
+    }
+    .news__right-cont a {
+        position: absolute;
+        bottom: 25px;
+    }
+    .flag {
+        transform: rotate(-45deg) scale(1.5) translate(-100px, -100px);
+        top: 40px;
+    }
+    .flag {
+        transform: rotate(-45deg);
+        top: 236px;
+        left: 0;
+        width: 760px;
+        top: 322px !important;
+        z-index: 0 !important;
+    }
+    .container {
+        width: 375px;
+    }
+    .banner {
+        width: 375px;
+        height: 64vh;
+        margin-top: -26px;
+    }
+    h1 {
+        font-weight: 400;
+        font-size: 97px;
+        margin-top: -20px;
+    }
+    .banner__header-center {
+        font-size: 91px;
+        margin-left: 8px;
+    }
+    .banner__header-down {
+        font-size: 46px;
+        margin-top: -13px;
+        margin-left: 13px;
+    }
+    .flagmob {
+        display: block;
+        position: absolute;
+        width: 100vw;
+        top: 152px;
+        z-index: 0;
+    }
+    .carcity {
+        height: 621px;
+    }
+    .car {
+        top: 208px;
+        width: 90vw;
+        max-width: 499px;
+    }
+
+    .play__button {
+ 
+        margin-right: 0;
+        margin-top: 0px;
+        z-index: 50;
+    }
+    .scroll {
+        top: 674px;
+    }
+    .news__content {
+
+        padding-top: 10vh;
+    }
+    .banner__container {
+        height: 500px;
+    }
+    .car {
+      
+        width: 320px;
+        
+    }
+    .news {
+        background-image: url(../assets/backgrounds/18.jpg);
+        width: 100vw;
+        height: 812px;
+    }
+} 
+@media(max-width:1440px) and (min-width:1024px) {
+    .news {
+        height: 700px;
+    }
+    .news__left-cont img:first-child {
+        width: 421px;
+    }
+    .news__left-cont img:nth-child(1) {
+        margin-top: 0;
+    }
+    .news__left-cont img:nth-child(2) {
+        width: 330px;
+        margin-top: 46px;
+    }
+    .flag {
+        position: absolute;
+        z-index: 0;
+        left: -70px;
+        top: -241px;
+        width: 1179px;
+    }
+}

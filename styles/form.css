@@ -1,0 +1,205 @@
+.container {
+    width: 508px;
+}
+.main {
+    position: relative;
+    height: 1026px;
+    overflow: hidden;
+    font-family: 'InvolveBold', sans-serif;
+    background: #fff;
+}
+body {
+    background: #fff;
+}
+main {
+    background: #fff;
+}
+.form__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+
+h1 {
+    margin-top: 70px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 130%;
+    text-align: center;
+    color: #000;
+    font-style: italic;
+}
+
+.header-subtitle {
+    margin: 16px 0 89px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+    text-align: center;
+    color: #000;
+    opacity: 0.4;
+    width: 380px;
+    font-family: 'Roboto', sans-serif;
+}
+.button {
+    border-radius: 4px;
+    padding: 16px 64px;
+    width: 262px;
+    height: 60px;
+    background: #7000ff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 127%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin-top:60px;
+    cursor: pointer;
+    transform: skewX(-16deg);
+    border: none;
+}
+input {
+    border:none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000;
+}
+form#myForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:15px;
+}
+.input-icon {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #00548560;
+    gap:11px;
+    padding: 16px 8px;
+    width: 508px;
+}
+input:focus, textarea:focus {
+    outline: none;
+}
+.flag {
+    background-image: url('../assets/backgrounds/flag_unable.png');
+    height: 1455px;
+    width: 1920px;
+    position: absolute;
+    left:50%;
+    top:117px;
+    transform: translateX(-50%);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+.succses-message {
+    margin-top: 0;
+    display: none;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 125%;
+    text-align: center;
+    color: #000;
+    font-style: italic;
+    font-family: 'Involve', sans-serif;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+.input-icon.unactive
+{
+    opacity: 0.4;
+}
+button.unactive {
+    opacity: 0.4;
+    pointer-events: none;
+}
+.flag.unactive {
+    opacity: 0.4;
+}
+textarea {
+    border: none;
+    resize: none;
+}
+.input-icon:last-child textarea {
+    display: none;
+    font-size:20px;
+}
+.thankForm {
+    margin-top: 50vh;
+    transform: translateY(-100%);
+}
+@media (max-width:786px) {
+    .flag {
+        background-image: url('../assets/backgrounds/flag_unable1.png');
+    }
+    .input-icon:last-child input {
+        display: none;
+    }
+    .input-icon:last-child textarea {
+        display: block;
+        height: 48px;
+        min-height: 48px;
+        max-height: 144px;
+        overflow-y: auto;
+        resize: none;
+        padding-top:12px;
+    }
+    .input-icon:last-child textarea:focus {
+        height: 100px; /* При фокусе поле будет автоматически увеличиваться */
+    }
+    .button {
+        padding: 0;
+        width: 170px;
+        height: 48px;
+        font-size: 20px;
+        position: absolute;
+        top: 67vh;
+    }
+    h1 {
+        margin-top: 6vh;
+        font-weight: 500;
+        font-size: 32px;
+    }
+    .header-subtitle {
+        margin: 3% 0 10%;
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .flag {
+        width: 375px;
+        top: 47px;
+        top: 86% !important;
+        height: 200px;
+        width: 100%;
+    }
+    .main {
+        min-height: 650px;
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        font-family: 'InvolveBold', sans-serif;
+    } 
+    .container {
+        min-height: 650px;
+    }
+}
+
+@media (max-width:510px) {
+    .container {
+        width: 375px;
+        height: 100vh;
+    }
+    .input-icon {
+        width: 100vw;
+    }
+    .burder__list-item:not(:first-child) a {
+        padding-left: 0px;
+    }
+}

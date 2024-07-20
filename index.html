@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEST</title>
+    <link rel="stylesheet" href="styles/index.css?3">
+    <link rel="stylesheet" href="styles/breeding.css?2">
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <a href="./main.html" class="header__logo">
+                <img src="assets/images/logo 2.svg">
+            </a>
+            <div class="burger">
+                <div class="burder-line"></div>
+                <div class="burder-line"></div>
+                <div class="burder-line"></div>
+            </div>
+        </div>
+        <div class="burger__menu">
+            <div class="overlay">
+                <div class="buger__conent">
+                    <img class="modal__line" src="./assets/backgrounds/re.png">
+                    <ul class="burger__list">
+                        <li class="burder__list-item">
+                            <a href="https://game.west-racing.ru">
+                                <span>Начни гонку</span>
+                                <div disabled="true" class="burder__button">
+                                    <p>за призами
+                                        <img src="./assets/images/Arrows.png">
+                                    </p>
+                                </div>
+                       
+                            </a>
+                            
+                        </li>
+                        <li class="burder__list-item">
+                            <a href="./brand.html">
+                                <div class="burder__list-item-text">
+                                    <span>О бренде</span>
+                                    <p>История West</p>
+                                </div>
+                                <img src="./assets/images/about_img.png">
+                                <img class="stroke" src="./assets/backgrounds/stroke.png">
+                            </a>
+                            
+                        </li>
+                        <li class="burder__list-item">
+                            <a href="./production.html">
+                                <div class="burder__list-item-text">
+                                    <span>Продукция</span>
+                                    <p>Выбери свой вкус</p>
+                                </div>
+                                <img src="./assets/images/products_img.png">
+                            </a>
+                            
+                        </li>
+                        <li class="burder__list-item">
+                            <a href="./news.html">
+                                <div class="burder__list-item-text">
+                                    <span>Лента</span>
+                                    <p>Мир бренда</p>
+                                </div>
+                                <img src="./assets/images/lenta_img.png">
+                                <img class="stroke end" src="./assets/backgrounds/stroke2.png">
+                            </a>
+                            
+                        </li>
+                        <li class="burder__list-item">
+                            <a href="form.html">
+                                <button class="perpl">
+                                    обратная связь
+                                </button>
+                            </a>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="breeding">
+                <div class="carphone"></div>
+                <div class="flag"></div>
+                <div class="grassphone"></div>
+                <img class="car" src="./assets/images/game_wecar.png">
+                <div class="logo">
+                
+                <img src>
+                    <div class="logo__img">
+                    </div>
+                    <a href="https://t.me/WestRu_bot" class="telegram__button">перейти в telegram-бот</a>
+                </div>
+                <a class="west" href="./disclaimer.html">
+                    <div class="west__img"></div>
+                    <p>перейти на сайт</p>
+                </a>
+            </section>
+        </div>
+    </main>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(97609446, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true
+        });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/97609446" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+
+    <script src="script/scroll.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+const accessToken = urlParams.get('access_token')
+if (accessToken) {
+    const links = document.querySelectorAll('a')
+    links.forEach(link => {
+        const href = link.getAttribute('href')
+        link.setAttribute('href', `${href}?access_token=${accessToken}`) 
+    });
+} else {
+    const links = document.querySelectorAll('.game__button')
+    links.forEach(link => {
+        link.setAttribute('href', 'https://t.me/WestRu_bot?start=utmSource-website')
+    });
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="fonts/fonts/fonts.css">
+    <link rel="stylesheet" href="styles/index.css?4">
+    <link rel="stylesheet" href="styles/form.css?6">
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <a href="./main.html" class="header__logo">
+                <img src="assets/images/logo 2.svg">
+            </a>
+            <div class="burger">
+                <div class="burder-line"></div>
+                <div class="burder-line"></div>
+                <div class="burder-line"></div>
+            </div>
+        </div>
+        <div class="burger__menu">
+            <div class="overlay">
+                <div class="buger__conent">
+                    <img class="modal__line" src="./assets/backgrounds/re.png">
+                    <ul class="burger__list">
+                        <li class="burder__list-item">
+                            <a href="https://game.west-racing.ru">
+                                <span>Начни гонку</span>
+                                <div disabled="true" class="burder__button">
+                                    <p>за призами
+                                        <img src="./assets/images/Arrows.png">
+                                    </p>
+                                </div>
+                       
+                            </a>
+                            
+                        </li>
+                        <li class="burder__list-item">
+                            <a href="./brand.html">
+                                <div class="burder__list-item-text">
+                                    <span>О бренде</span>
+                                    <p>История West</p>
+                                </div>
+                                <img src="./assets/images/about_img.png">
+                                <img class="stroke" src="./assets/backgrounds/stroke.png">
+                            </a>
+                            
+                        </li>
+                        <li class="burder__list-item">
+                            <a href="./production.html">
+                                <div class="burder__list-item-text">
+                                    <span>Продукция</span>
+                                    <p>Выбери свой вкус</p>
+                                </div>
+                                <img src="./assets/images/products_img.png">
+                            </a>
+                            
+                        </li>
+                        <li class="burder__list-item">
+                            <a href="./news.html">
+                                <div class="burder__list-item-text">
+                                    <span>Лента</span>
+                                    <p>Мир бренда</p>
+                                </div>
+                                <img src="./assets/images/lenta_img.png">
+                                <img class="stroke end" src="./assets/backgrounds/stroke2.png">
+                            </a>
+                            
+                        </li>
+                        <li class="burder__list-item">
+                            <a href="form.html">
+                                <button class="perpl">
+                                    обратная связь
+                                </button>
+                            </a>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="form__body">
+                <h1 class="form-header">Обратная связь</h1>
+                <p class="header-subtitle form-header">Вы можете поделиться с нами предложениями и пожеланиями</p>
+                <form id="myForm">
+                    <div class="input-icon unactive">
+                        <img src="./assets/icons/name_icon.svg" alt="Иконка 1">
+                        <input type="text" name="name" id="name" placeholder="Имя">
+                    </div>
+                    <div class="input-icon unactive">
+                        <img src="./assets/icons/mail_icon.svg" alt="Иконка 2">
+                        <input type="text" name="email" id="email" placeholder="Электронная почта">
+                    </div>
+                    <div class="input-icon unactive">
+                        <img src="./assets/icons/text_icon.svg" alt="Иконка 3">
+                        <input type="text" name="email" class="text" placeholder="Ваш текст">
+                        <textarea name="message" rows="4" class="text" placeholder="Ваш текст"></textarea>
+                    </div>
+                    
+                </form>
+                <p class="succses-message">Ваше сообщение
+                    успешно отправлено</p>
+                <button class="unactive button" type="submit"><span>Отправить</span></button>
+            </section>
+        </div>
+        <div class="flag unactive"></div>
+    </main>
+    <script src="script/scroll.js"></script>
+    <script>
+        const formsInput = document.querySelectorAll('.input-icon input');
+        const button = document.querySelector('.button');
+        let activeCount = 0;
+        const textarea = document.querySelector('textarea');
+    
+        function updateActiveState() {
+            if (activeCount === 3) {
+                document.querySelector('.flag').classList.remove('unactive');
+                button.classList.remove('unactive');
+            } else {
+                document.querySelector('.flag').classList.add('unactive');
+                button.classList.add('unactive');
+            }
+        }
+    
+        textarea.addEventListener('input', function() {
+            const textareaContainer = document.querySelectorAll('.input-icon')[2];
+            if (textareaContainer.classList.contains('unactive')) {
+                activeCount++;
+                textareaContainer.classList.remove('unactive');
+            }
+            updateActiveState();
+        });
+
+        textarea.addEventListener('blur', function() {
+                if (textarea.value === '' || textarea.value === ' ') {
+                    const inputContainer = document.querySelectorAll('.input-icon')[2];
+                    if (!inputContainer.classList.contains('unactive')) {
+                        inputContainer.classList.add('unactive');
+                        activeCount--;
+                    }
+                    updateActiveState();
+                }
+            });
+    
+        formsInput.forEach((el, index) => {
+            el.addEventListener('input', function() {
+                const inputContainer = document.querySelectorAll('.input-icon')[index];
+                if (inputContainer.classList.contains('unactive')) {
+                    activeCount++;
+                    inputContainer.classList.remove('unactive');
+                }
+                updateActiveState();
+            });
+    
+            el.addEventListener('blur', function() {
+                if (el.value === '' || el.value === ' ') {
+                    const inputContainer = document.querySelectorAll('.input-icon')[index];
+                    if (!inputContainer.classList.contains('unactive')) {
+                        inputContainer.classList.add('unactive');
+                        activeCount--;
+                    }
+                    updateActiveState();
+                }
+            });
+        });
+        let isSend = false;
+        document.querySelector('.form__body button').addEventListener('click', function(event) {
+            event.preventDefault();
+    
+            const text = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.querySelectorAll('.text')[0].value || document.querySelectorAll('.text')[1].value;
+            
+            if(isSend) {
+                document.querySelector('.succses-message').style.display = 'none';
+                document.getElementById('myForm').style.display = 'block'
+                document.querySelectorAll('.form-header')[0].style.display = 'block';
+                document.querySelectorAll('.form-header')[1].style.display = 'block';
+                document.querySelector('.button').textContent = 'отправить';
+                isSend = false;
+            }
+            else {
+                const formData = { text, email, message };
+            console.log(JSON.stringify(formData));
+    
+            fetch('https://west-racing.ru/api/contact/', { 
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                document.querySelector('.succses-message').style.display = 'block';
+                document.getElementById('myForm').style.display = 'none'
+                document.querySelectorAll('.form-header')[0].style.display = 'none';
+                document.querySelectorAll('.form-header')[1].style.display = 'none';
+                document.querySelector('.button').textContent = 'закрыть';
+                isSend = true;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+            }
+    
+            
+        });
+    
+    </script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+const accessToken = urlParams.get('access_token')
+if (accessToken) {
+    const links = document.querySelectorAll('a')
+    links.forEach(link => {
+        const href = link.getAttribute('href')
+        link.setAttribute('href', `${href}?access_token=${accessToken}`) 
+    });
+} else {
+    const links = document.querySelectorAll('.game__button')
+    links.forEach(link => {
+        link.setAttribute('href', 'https://t.me/WestRu_bot?start=utmSource-website')
+    });
+
+
+}
+
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.input-icon') && !event.target.closest('textarea')) {
+        document.activeElement.blur();
+    }
+});
+    </script>
+</body>
+</html>

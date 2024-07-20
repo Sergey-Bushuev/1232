@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEST</title>
+    <link rel="stylesheet" href="styles/index.css?3">
+    <link rel="stylesheet" href="styles/disclaimer.css?2">
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <a href="./main.html" class="header__logo">
+                <img src="assets/images/logo 2.svg">
+            </a>
+            <div class="burger">
+                <div class="burder-line"></div>
+                <div class="burder-line"></div>
+                <div class="burder-line"></div>
+            </div>
+        </div>
+        <div class="burger__menu">
+            <div class="overlay">
+                <div class="buger__conent">
+                    <img class="modal__line" src="./assets/backgrounds/re.png">
+                    <ul class="burger__list">
+                        <li class="burder__list-item">
+                            <a href="https://game.west-racing.ru">
+                                <span>Начни гонку</span>
+                                <div disabled="true" class="burder__button">
+                                    <p>за призами
+                                        <img src="./assets/images/Arrows.png">
+                                    </p>
+                                </div>
+                       
+                            </a>
+                            
+                        </li>
+                        <li class="burder__list-item">
+                            <a href="./brand.html">
+                                <div class="burder__list-item-text">
+                                    <span>О бренде</span>
+                                    <p>История West</p>
+                                </div>
+                                <img src="./assets/images/about_img.png">
+                                <img class="stroke" src="./assets/backgrounds/stroke.png">
+                            </a>
+                            
+                        </li>
+                        <li class="burder__list-item">
+                            <a href="./production.html">
+                                <div class="burder__list-item-text">
+                                    <span>Продукция</span>
+                                    <p>Выбери свой вкус</p>
+                                </div>
+                                <img src="./assets/images/products_img.png">
+                            </a>
+                            
+                        </li>
+                        <li class="burder__list-item">
+                            <a href="./news.html">
+                                <div class="burder__list-item-text">
+                                    <span>Лента</span>
+                                    <p>Мир бренда</p>
+                                </div>
+                                <img src="./assets/images/lenta_img.png">
+                                <img class="stroke end" src="./assets/backgrounds/stroke2.png">
+                            </a>
+                            
+                        </li>
+                        <li class="burder__list-item">
+                            <a href="form.html">
+                                <button class="perpl">
+                                    обратная связь
+                                </button>
+                            </a>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="banner">
+        </div>
+        <div class="container">
+            
+            <div class="content">
+                <span>Доступ на веб-сайт разрешен только гражданам рф старше 18 лет,<br>
+                    являющимся потребителями табака.</span>
+                <p>я подтверждаю, что мне есть 18 лет и я являюсь потребителем табака.</p>
+                <div class="button__container">
+                    <a href="./index.html">нет</a>
+                    <a href="./main.html">да</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="script/scroll.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+const accessToken = urlParams.get('access_token')
+if (accessToken) {
+    const links = document.querySelectorAll('a')
+    links.forEach(link => {
+        const href = link.getAttribute('href')
+        link.setAttribute('href', `${href}?access_token=${accessToken}`) 
+    });
+} else {
+    const links = document.querySelectorAll('.game__button')
+    links.forEach(link => {
+        link.setAttribute('href', 'https://t.me/WestRu_bot?start=utmSource-website')
+    });
+}
+    </script>
+</body>
+</html>
