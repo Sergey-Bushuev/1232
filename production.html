@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Продукция</title>
-    <link rel="stylesheet" href="styles/index.css?2">
-    <link rel="stylesheet" href="styles/turbodrive.css?8">
+    <link rel="stylesheet" href="styles/index.css?3">
+    <link rel="stylesheet" href="styles/turbodrive.css?10">
 </head>
 <body>
     <header>
@@ -32,9 +32,7 @@
                                         <img src="./assets/images/Arrows.png">
                                     </p>
                                 </div>
-                       
                             </a>
-                            
                         </li>
                         <li class="burder__list-item">
                             <a href="./brand.html">
@@ -136,54 +134,11 @@
                         <img src="./assets/backgrounds/block2.png">
                     </div>
                 </div>
-            </section>
-            <div class="blue-block"><img src="./assets/images/stream.svg"></div>
-            <section class="plits-second">
-                <div class="plits__container">
-                <div class="dark-circle"></div>
-                <div class="dark-circle"></div>
-
-                <div class="dark-circle"></div>
-                <div class="dark-circle"></div>
-
-                <img class="gray-pack packs" src="./assets/packs/Group 530.png">
-                <img class="red-pack packs" src="./assets/packs/Group 533.png">
-
-                <img class="filter-red" src="./assets/packs/objectred.svg">
-                <img class="filter-gray" src="./assets/packs/objectgray.svg">
-
-                <img class="blue-pack packs dekst" src="./assets/packs/pack.png">
-                <img class="blue-pack packs mob" src="./assets/packs/packblue.png">
-
-                <img class="gray-pl packs" src="./assets/packs/plg1.png ">
-                <img class="red-pl fir packs" src="./assets/packs/plr1.png">
-                <img class="red-pl packs" src="./assets/packs/plr2.png">
-                <img class="blue-pl packs" src="./assets/packs/plb1.png">
-
-                <img class="red-mob anim" src="./assets/packs/red_pack.png">
-                <img class="blue-mob anim" src="./assets/packs/richblue_pack.png">
-                <img class="gray-mob anim" src="./assets/packs/silver_pack.png">
-            </div>
-            </section>
-            
-            <section class="darl__plit">
-                <div class="container darl-plit-cont">
-                    <img class="darl-plit" src="./assets/packs/darkplitpng.png">
-                </div>
-                <img class="dark__plit" src="./assets/packs/2075.png">
-                <div class="dark-cont">
-                    <div class="img-dark-cont">
-                        <img class="mobile d-pack" src="./assets/packs/packd.png">
-                        <img class="darl-plit-down" src="./assets/packs/dark-plit.png">
-                    </div>
-                    
-                </div>
-                
                 <div class="flag_unable">
                     <img src="./assets/backgrounds/flag_unable.png">
                 </div>
-                
             </section>
+            
         </main>
         <footer class="footer">
             <img class="footer__flag" src="./assets/backgrounds/flag_unable.png">
@@ -263,12 +218,9 @@
         let ese = false;
         let scrollUser;
         document.addEventListener("DOMContentLoaded", function() {
-            if(window.innerWidth < 768) {
+            if(window.innerWidth < 769) {
                 setTimeout(()=> {
-                    darkPlit.src = './assets/packs/2085.png'
-                    redPack.src = './assets/packs/redmob.png'
-                    grayPluitS.src = './assets/packs/graymob.png';
-                    bluePluitS.src = './assets/packs/bluemob.png';
+             
 
                     firstScreen.style.marginTop = '0px';
                     window.scrollTo(0, 0);
@@ -297,7 +249,7 @@
                 }
             }
             
-            if(window.innerWidth < 768) {
+            if(window.innerWidth < 769) {
                 scrollUser = window.pageYOffset;
             if(scrollUser > 407) {
                 setTimeout(()=>{efe = true; ese = true},3000)
@@ -314,7 +266,7 @@
                 }
             }
             }
-            if(scrollUser > 1380) {
+            if(scrollUser > 1280) {
                 bluePack[1].style.transform = 'none';
                 bluePack[2].style.transform = 'none';
                 setTimeout(()=> {
@@ -336,7 +288,7 @@
                 
                 
             } 
-            if(scrollUser > 1500) {
+            if(scrollUser > 1600) {
                 grayPack[1].style.transform = 'none';
                 //grayPack[2].style.transform = 'none';
                 setTimeout(()=> {
@@ -367,36 +319,6 @@
             }
             if(scrollUser > 2350) {
                 grayPack[2].style.transform = 'translate(0, -100px)';
-            }
-            if(scrollUser > 2750) {
-                
-                bluePluitS.style.transform = 'none'
-                blueMob.style.transform = 'none';
-            }
-            if(scrollUser > 3350) {
-                document.querySelector('.blue-pl.packs').style.transform = 'translate(0, -60px)';
-                grayPluitS.style.transform = 'none'
-                grayMob.style.transform = 'translate(0, -20px)';
-                grayPl.style.transform = 'translate(10px, -100px)';
-                setTimeout(()=> {
-                    grayMob.style.transform = 'none';
-                },1500)
-            }
-            if(scrollUser > 3850) {
-                redPack.style.transform = 'none'
-                redMob.style.transform = 'none'
-                setTimeout(()=> {
-                    redPl.style.transform = 'translate(0, -20px)'
-                }, 400)
-                 
-            }
-            if(scrollUser > 4300) {
-                redMob.style.transform = 'translate(0, -60px)';
-               
-            }
-            if(scrollUser > 4800) {
-                dPack.style.transform = 'none';
-                darkPlitS.style.transform = 'none';
             }
             }
             

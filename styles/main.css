@@ -149,12 +149,12 @@ img.phone {
 }
 .news__right-cont-header {
     font-style: italic;
-font-weight: 700;
-font-size: 60px;
-line-height: 109%;
-text-transform: uppercase;
-color: #fff;
-font-family: 'EU', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 109%;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Play", sans-serif;
 }
 .news__right-cont p {
     font-weight: 400;

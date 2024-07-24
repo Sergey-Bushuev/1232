@@ -147,6 +147,7 @@ ul.main__info-list {
     color: #fff;
     width: 410px;
 }
+
 li.main__info-list-item {
     display: flex;
     flex-direction: column;
